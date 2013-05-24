@@ -5,6 +5,8 @@ class RemotePayuInIntegrationTest < Test::Unit::TestCase
 
   def setup
     @payu_in = PayuIn::Notification.new(http_raw_data)
+    PayuIn.merchant_id = 'C0Dr8m'
+    PayuIn.secret_key = '3sf0jURk'
   end
 
   def tear_down
